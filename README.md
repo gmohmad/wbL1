@@ -1,7 +1,3 @@
-# Wildberries internship L1 task
-
-## Theory questions
-
 ### 1. What's the most efficient way to concatenate strings?
 strings.Builder. Example:
 ```
@@ -154,3 +150,8 @@ func main() {
 ```
 It will print 
 ```
+[b b a][a a]
+```
+because again, append allocates a new underlying array if we exceed the capacity, when we do 'append(slice, "a")',
+we exceed the capacity of the 'slice' slice, which is 2, and because of that, the changes we make in the anonymous function
+do not apply to the slice from the main function.
