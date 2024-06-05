@@ -15,14 +15,14 @@ don't have to explicitly say that an object defines the interface. This is possi
 Example:
 ```
 type I interface {
-    SomeMethodThatObjectsHaveToImplement()
+    SomeMethodThatObjectsMustImplement()
 }
 ```
 
 ### 3. What's the difference between RWMutex and Mutex?
 Mutex provides Lock and Unlock methods to lock access to a critical section so that only one goroutine at a time can
 access it, doesn't matter if it's trying to write or read the data.
-RWMutex, in addition to Lock and Unlock, provides RLock and RUlock. Using these allow multiple goroutines to read 
+RWMutex, in addition to Lock and Unlock, provides RLock and RUnlock. Using these allow multiple goroutines to read 
 the data, but only one to write. In short, Mutex lets us block for both read and write operations, while RWMutex also
 lets us block either for read or write operations.
 
