@@ -12,7 +12,7 @@ func main() {
 }
 
 So in this code we initialize a huge string and assign it to 'v' variable. And in Go, strings are just immutable
-slices of bytes, and a slice is just a struct that has len, cap, and pointer to an element of the
+slices of bytes, and a slice is just a struct that has len, cap, and a pointer to an element of the
 underlying array fields. Next, we create a new string (slice of bytes) using 'v[:100]' and assing it to 'justString', which
 is a global variable. So because the slice we have in 'justString' is referencing the first 100 values from the underlying
 array, and 'justString' is a global variable (which means it will not be cleaned up by the GC), the GC will not be able to
