@@ -34,7 +34,7 @@ it'it will not block
 ### 5. What's the size of an empty struct (struct{}{})?
 0 bytes.
 
-### 6. Is there operator/method overloadinandg in Go?
+### 6. Is there operator/method overloading in Go?
 Nope.
 
 ### 7. In what order will map[int]int elements be displayed?
@@ -58,7 +58,7 @@ m := map[int]int{}
 m := make(map[int]int)
 ```
 
-### 10. What is this program output and why?
+### 10. What will this program output and why?
 ```
 func update(p *int) {
   b := 2
@@ -83,7 +83,7 @@ It will print
 Thats because in 'update' function we're updating the value of the local 'p' variable, not the value of 'p' we created in
 main function, because in Go, everything is passed by a copy, even pointers.
 
-### 11. What is this program output and why?
+### 11. What will this program output and why?
 ```
 func main() {
   wg := sync.WaitGroup{}
@@ -101,7 +101,7 @@ func main() {
 It will randomly print numbers from 0 to 4 and then deadlock because the WaitGroup is passed by a copy to the anonymous goroutine, 
 so calling wg.Done() does not affect 'wg' we created in main function
 
-### 12. What is this program output and why?
+### 12. What will this program output and why?
 ```
 func main() {
   n := 0
@@ -114,7 +114,7 @@ func main() {
 ```
 It will print 0, because variables created in a 'if' block are scoped within that 'if' block
 
-### 13. What is this program output and why?
+### 13. What will this program output and why?
 ```
 func someAction(v []int8, b int8) {
   v[0] = 100
@@ -134,7 +134,7 @@ It will print
 because the 'append' function allocates a new underlying array if the capacity of the slice
 we're calling it on is exceeded, but before that we're operating on the same underlying array, that's why 1 became 100.
 
-### 14. What is this program output and why?
+### 14. What will this program output and why?
 ```
 func main() {
   slice := []string{"a", "a"}

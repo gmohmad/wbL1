@@ -17,7 +17,7 @@ func main() {
 		return intStream
 	}
 
-	// squares is a stage of a conveyor that returns squaresStreamw with values from the given channel
+	// squares is a stage of a conveyor that returns squaresStream with values from the given channel
 	squares := func(intStream <-chan int) <-chan int {
 		squaresStream := make(chan int) // Same as in ints function, we have to close to prevent a deadlock
 		go func() {
