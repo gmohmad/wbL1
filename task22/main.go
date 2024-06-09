@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"math/big"
 )
 
 func main() {
 	// Initialize two big.Int's - num1 and num2, with values > 2^20
-	num1 := big.NewInt(2 << 24)
-	num2 := big.NewInt(2 << 23)
+	num1 := big.NewInt(int64(math.Pow(2, 23)))
+	num2 := big.NewInt(int64(math.Pow(2, 21)))
 
 	// This is the big.Int we're going to do */-+ operations on
 	res := new(big.Int)
