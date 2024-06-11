@@ -57,4 +57,6 @@ func main() {
 	time.Sleep(time.Second)
 	cancel()
 	close(done)
+
+	// etc
 }
